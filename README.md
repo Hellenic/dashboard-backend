@@ -2,6 +2,11 @@
 
 To use: Clone or download the repository to yourself.
 
+Build and refresh the data on the server with:
+```
+gulp
+```
+
 Install dependencies with:
 ```
 npm install
