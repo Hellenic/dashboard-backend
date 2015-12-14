@@ -1,0 +1,40 @@
+{
+  "name": "Restaurant",
+  "plural": "Restaurants",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "phone": {
+      "type": "string"
+    },
+    "street": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "openingTimes": {
+      "type": "object"
+    },
+    "menu": {
+      "type": "object"
+    },
+    "url": {
+      "type": "string"
+    },
+    "coordinates": {
+      "type": "object"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

@@ -1,6 +1,6 @@
 // Poor-man's initial data
 module.exports = function(app) {
-    console.log('Importing sample data...');
+    console.log('Importing sample data...\n');
 
     // Example data for Game
     var Game = app.models.Game;
@@ -17,5 +17,34 @@ module.exports = function(app) {
       flagDay.locale = "FI";
       flagDay.country = "Finland";
       FlagDay.create(flagDay);
+    }
+
+    // Initial data for restaurants
+    var Restaurant = app.models.Restaurant;
+    var raflaamoData = require('../../data/Raflaamo-restaurants.json');
+    // Parse Raflaamo data
+    for (var i=0; i<raflaamoData.lunchcards.length; i++)
+    {
+      var r = raflaamoData.lunchcards[i];
+      Restaurant.create({
+        name: r.restaurant,
+        phone: r.phone,
+        street: r.streetAddress,
+        city: r.city,
+        openingTimes: r.opening_times_weeks.openingTimesColumns,
+        menu: r.menu,
+        url: r.siteUrl
+      });
+    }
+
+    // Parse Eat.fi data
+    var eatData = require('../../data/Eat-restaurants.json');
+    for (var i=0; i<eatData.show.length; i++)
+    {
+      var r = eatData.show[i];
+      Restaurant.create({
+        name: r[4],
+        coordinates: {x: r[1], y: r[2]}
+      });
     }
 };

@@ -32,12 +32,15 @@
     "dataSource": "db",
     "public": false
   },
-  
   "Game": {
     "dataSource": "db",
     "public": true
   },
   "FlagDay": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Restaurant": {
     "dataSource": "db",
     "public": true
   }
