@@ -20,6 +20,12 @@
     "city": {
       "type": "string"
     },
+    "description": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string"
+    },
     "openingTimes": {
       "type": "object"
     },
