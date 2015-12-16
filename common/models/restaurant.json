@@ -14,10 +14,22 @@
     "phone": {
       "type": "string"
     },
+    "url": {
+      "type": "string"
+    },
     "street": {
       "type": "string"
     },
     "city": {
+      "type": "string"
+    },
+    "postalCode": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string"
+    },
+    "type": {
       "type": "string"
     },
     "description": {
@@ -26,16 +38,13 @@
     "category": {
       "type": "string"
     },
+    "coordinates": {
+      "type": "object"
+    },
     "openingTimes": {
       "type": "object"
     },
     "menu": {
-      "type": "object"
-    },
-    "url": {
-      "type": "string"
-    },
-    "coordinates": {
       "type": "object"
     }
   },
