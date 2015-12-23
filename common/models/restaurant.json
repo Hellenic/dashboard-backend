@@ -43,13 +43,16 @@
     },
     "openingTimes": {
       "type": "object"
-    },
-    "menu": {
-      "type": "object"
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "menus": {
+      "type": "hasMany",
+      "model": "MenuItem",
+      "foreignKey": "menuId"
+    }
+  },
   "acls": [],
   "methods": {}
 }

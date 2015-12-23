@@ -1,5 +1,5 @@
 {
-  "name": "FlagDay",
+  "name": "SpecialDay",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -11,7 +11,7 @@
       "required": true
     },
     "date": {
-      "type": "string",
+      "type": "date",
       "required": true
     },
     "flag_day": {
@@ -24,6 +24,9 @@
       "type": "string"
     },
     "description": {
+      "type": "string"
+    },
+    "alternate_names": {
       "type": "string"
     },
     "country": {

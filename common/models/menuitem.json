@@ -1,0 +1,37 @@
+{
+  "name": "MenuItem",
+  "plural": "MenuItems",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "validFrom": {
+      "type": "date"
+    },
+    "validTo": {
+      "type": "date"
+    },
+    "price": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "restaurant": {
+      "type": "belongsTo",
+      "model": "Restaurant",
+      "foreignKey": "restaurantId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
